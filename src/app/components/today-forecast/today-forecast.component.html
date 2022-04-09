@@ -1,0 +1,8 @@
+<span class="city">Gothenburg</span>
+<img class="icon"
+     [src]="data?.symbol_code_url"
+     alt="Icon" />
+<span class="temperature">{{data?.air_temperature}} &deg; C</span>
+<span class="wind-speed">{{data?.wind_speed}}m/s</span>
+<span class="day">{{data?.time | date:"EEE hh:mm"}}</span>
+<span class="details">{{data?.symbol_code}}</span>

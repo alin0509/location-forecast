@@ -1,0 +1,73 @@
+:host {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+.menu {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    margin-right: 102px;
+    // justify-content: space-around;
+    > * {
+        max-width: 180px;
+        height: 32px;
+        border-radius: 4px;
+        background: #ffffff;
+
+        letter-spacing: 0.3px;
+        font-family: 'Volvo Novum';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        flex: 1;
+
+        &.selected,
+        &:hover {
+            background: #66b3a6;
+            color: #ffffff;
+        }
+    }
+}
+.burger-menu {
+    display: none;
+}
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    background: #ffffff;
+    padding: 16px 0;
+    height: 64px;
+    width: 100%;
+}
+.title {
+    max-width: 165px;
+    flex: 1;
+    height: 26px;
+    margin: 2px 102px 4px 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #828282;
+}
+@media only screen and (max-width: 844px) {
+    .menu {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .toolbar {
+        justify-content: space-between;
+    }
+}

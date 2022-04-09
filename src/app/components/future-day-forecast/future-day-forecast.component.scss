@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    .icon {
+        width: 64px;
+        height: 70px;
+        margin: 48px 0;
+    }
+    .day,
+    .temperature,
+    .wind-speed {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        color: #000000;
+        margin: 7px 0;
+    }
+
+    @media only screen and (max-width: 540px) {
+        flex-direction: row;
+        width: 100%;
+        flex-grow: 1;
+        justify-content: space-around;
+        align-items: center;
+        .icon {
+            width: 53px;
+            height: 57px;
+            margin: 0;
+        }
+
+        .day,
+        .temperature,
+        .wind-speed {
+            margin: 0;
+        }
+    }
+    @media only screen and (max-width: 840px) {
+        min-width: 230px;
+    }
+}
