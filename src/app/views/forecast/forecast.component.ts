@@ -1,18 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ForecastService } from 'src/app/services/forecast.service';
+import { ForecastService } from '../../services';
 
 @Component({
   selector: 'app-forecast',
   templateUrl: './forecast.component.html',
   styleUrls: ['./forecast.component.scss']
 })
-export class ForecastComponent implements OnInit {
+export class ForecastComponent {
   getForecast$: Observable<any> = this.forecastService.getForecast();
 
-  constructor(private forecastService: ForecastService) { }
-  ngOnInit(): void {
-  }
-
-
+  constructor(private forecastService: ForecastService) { } 
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, tap } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ForecastService {
@@ -11,7 +11,6 @@ export class ForecastService {
   getForecast(): Observable<any> {
     return this.http.get('https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=51.5&lon=0').pipe(
       map((res: any) => res?.properties?.timeseries),
-      // tap(res => console.log(res)),
       map((res: any) => (
         res.map((r: any) => ({
           time: r?.time,
@@ -21,19 +20,13 @@ export class ForecastService {
           symbol_code: r?.data?.next_12_hours?.summary?.symbol_code,
         }))
       )),
-      tap(res => console.log(res)),
-
       map((res: any[]) => {
         this.resultMap = {};
         res.forEach(day => this.resultMap[day.time] = day);
-        // console.log(this.resultMap);
         return {
           now: res[0],
           next_7_days: this.getNextSevenDays().map(day => this.getDayForecast(day))
         }
-      }),
-      tap(res => {
-        console.log(res)
       })
     );
   }

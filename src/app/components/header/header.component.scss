@@ -1,3 +1,4 @@
+@import '../../styles/common.scss';
 :host {
     position: fixed;
     width: 100%;
@@ -13,21 +14,14 @@
     flex-grow: 1;
     flex-direction: row;
     margin-right: 102px;
-    // justify-content: space-around;
     > * {
+        @include volvo-text-style(16px, 24px, #000000);
+        flex: 1;
         max-width: 180px;
         height: 32px;
         border-radius: 4px;
         background: #ffffff;
-
         letter-spacing: 0.3px;
-        font-family: 'Volvo Novum';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #000000;
-        flex: 1;
 
         &.selected,
         &:hover {
@@ -42,23 +36,18 @@
 .toolbar {
     display: flex;
     flex-direction: row;
-    background: #ffffff;
-    padding: 16px 0;
-    height: 64px;
     width: 100%;
+    height: 64px;
+    padding: 16px 0;
+    background: #ffffff;
 }
 .title {
-    max-width: 165px;
+    @include roboto-text-style(22px,26px,#828282);  
     flex: 1;
+    max-width: 165px;
     height: 26px;
     margin: 2px 102px 4px 3px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    text-align: center;
-    color: #828282;
+
 }
 @media only screen and (max-width: 844px) {
     .menu {
