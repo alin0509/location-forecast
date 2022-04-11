@@ -1,0 +1,1 @@
+export * from './future-day-forecast.component';

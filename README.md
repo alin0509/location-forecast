@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Link to design :
+https://www.figma.com/file/7s0CgaaE78VMir9ItWZISh/Responsive-App?node-id=0%3A1
+
+##  Description of task:
+
+Create an Angular project
+
+Implement responsive layout below
+
+Fetch data from met.no  https://developer.yr.no/
+
+Connect the data to the layout
+Create your own components or use Angular Material
+
+Use icons provided from Yr (http://nrkno.github.io/yr-weather-symbols/)
+
+Upload the code to a repository and send us the link

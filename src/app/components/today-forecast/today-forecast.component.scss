@@ -1,0 +1,28 @@
+@import '../../styles/common.scss';
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon {
+        @include icon-style(42px, 46px, 9px 0);
+    }
+    .city {
+        @include roboto-text-style(38px, 45px, #828282);
+    }
+    .day,
+    .details {
+        @include roboto-text-style(19px, 22px, #a3a3a3);
+    }
+
+    .day {
+        margin-bottom: 6px;
+    }
+
+    .temperature,
+    .wind-speed {
+        @include roboto-text-style(22px, 26px, #000000);
+    }
+    .wind-speed {
+        margin: 12px 0;
+    }
+}

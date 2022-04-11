@@ -1,0 +1,22 @@
+@mixin roboto-text-style($fontSize, $lineHeight, $textColor) {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $textColor;
+}
+@mixin volvo-text-style($fontSize, $lineHeight, $textColor) {
+    font-family: 'Volvo Novum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $textColor;
+}
+@mixin icon-style($width, $height, $margin) {
+    width: $width;
+    height: $height;
+    margin: $margin;
+}

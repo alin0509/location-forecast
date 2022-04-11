@@ -1,0 +1,6 @@
+<span class="day">{{data?.time | date:"EEE"}}</span>
+<img class="icon"
+     [src]="data?.symbol_code_url"
+     alt="Icon" />
+<span class="temperature">{{data?.air_temperature}} &deg; C</span>
+<span class="wind-speed">{{data?.wind_speed}}m/s</span>

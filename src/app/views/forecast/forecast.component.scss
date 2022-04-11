@@ -1,0 +1,47 @@
+.future_days {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 40%;
+    overflow: auto;
+    margin: 0 64px;
+    @media only screen and (max-width: 540px) {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        margin: 0;
+    }
+}
+.now {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 40%;
+    @media only screen and (max-width: 540px) {
+        height: 100%;
+    }
+}
+.divider {
+    border: 1px solid #66b3a6;
+    margin: 54px 64px;
+    @media only screen and (max-width: 540px) {
+        display: none;
+    }
+}
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media only screen and (max-width: 540px) {
+        flex-direction: row;
+        overflow: auto;
+        > * {
+            width: 100%;
+            flex-shrink: 0;
+        }
+    }
+}

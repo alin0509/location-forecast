@@ -1,0 +1,11 @@
+<ng-container *ngIf="getForecast$|async as forecast">
+  <div class="now">
+    <app-today-forecast [data]="forecast.now"> </app-today-forecast>
+  </div>
+  <hr class="divider">
+  <div class="future_days">
+    <ng-container *ngFor="let day of forecast.next_7_days">
+      <app-future-day-forecast [data]="day"></app-future-day-forecast>
+    </ng-container>
+  </div>
+</ng-container>
